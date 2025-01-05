@@ -1,0 +1,25 @@
+/* Solution: Correct unitless values and overly broad selectors */
+
+/* Corrected unitless value */
+div.box {
+  width: 100px;
+  height: 50px;
+}
+
+/* More specific selector */
+.my-container div {
+    color: blue;
+}
+.my-container p {
+  color: green;
+}
+
+/* Addressing Specificity Conflicts (example): Using !important should be avoided unless absolutely necessary */
+#my-element {
+  color: red !important;
+}
+
+/* Better approach to handling specificity issues: make sure your intended selectors are more specific.  Generally avoid using !important */
+#my-element {
+  color: red;  /* High specificity ensures this overrides other styles */
+}
